@@ -14,12 +14,13 @@ class Document extends Model
 
     protected $guarded = [];
 
+    protected $table = "documents";   
 
     protected $fillable = ['status', 'payload'];
 
     public $incrementing = false;
 
-    
+
 
     public static function boot()
     {
