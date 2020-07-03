@@ -15,7 +15,7 @@ class DocumentsController extends Controller
      */
     public function index()
     {
-        $documents = Document::paginate(10)->orderBy('created_at','asc');
+        $documents = Document::orderBy('created_at','asc')->paginate(10);
 
         return response()->json($documents);
     }
@@ -135,7 +135,7 @@ class DocumentsController extends Controller
     {
         $document = Document::findOrFail($id);
 
-        if empty($request->get('payload')) {
+        if (empty($request->get('payload'))) {
  
           return response()->json($document, 400);
 

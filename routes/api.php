@@ -23,5 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' =>'v1/api/', 'namespace' => 'API'], function () { 
 
 Route::resource('documents', 'DocumentsController');
+Route::post('/documents/{id}/publish','DocumentsController@publish');
+Route::patch('/documents/{id}/patched','DocumentsController@patched');
 
 });
