@@ -17,6 +17,6 @@ class FindPaginatorTest extends TestCase
     {
         $response = $this->get('/api/v1/api/documents?page=1');
 
-        $response->assertStatus(200);
+        $response->assertResponseOK(200);
     }
 }

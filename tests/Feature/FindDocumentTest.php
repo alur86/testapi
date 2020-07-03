@@ -17,6 +17,6 @@ class FindDocumentTest extends TestCase
     {
         $response = $this->get('/api/v1/api/document/id/ba534850-bd51-11ea-9cee-598f4142cf61');
 
-        $response->assertStatus(200);
+        $response->assertResponseOK(200);
     }
 }
