@@ -42,6 +42,8 @@ Installation issue:
 
 8. configure database connection at the file .env
 
+9. use php artisan migrate to create the database
+
 
 That's all folks.
 
