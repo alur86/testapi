@@ -15,6 +15,8 @@ class CreateDocumentsTable extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
+            $table->enum('status', ['draft','published']);
+            $table->text('payload');
             $table->timestamps();
         });
     }
